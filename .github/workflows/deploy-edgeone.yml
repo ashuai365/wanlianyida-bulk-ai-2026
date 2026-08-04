@@ -1,0 +1,46 @@
+name: Deploy to EdgeOne
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: edgeone-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    env:
+      EDGEONE_PAGES_API_REGION: china
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build EdgeOne bundle
+        run: npm run build:edgeone
+
+      - name: Deploy production
+        env:
+          EDGEONE_PAGES_API_TOKEN: ${{ secrets.EDGEONE_PAGES_API_TOKEN }}
+        run: >-
+          npx --yes edgeone@latest makers deploy edgeone-dist
+          --name wanlianyida-bulk-ai-2026
+          --env production
+          --token "$EDGEONE_PAGES_API_TOKEN"
+          --json
