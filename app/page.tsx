@@ -56,6 +56,37 @@ const capabilities = [
   },
 ];
 
+const breakthroughs = [
+  {
+    number: "01",
+    tag: "产业知识",
+    title: "从通用语言理解，走向产业因果推理",
+    description: "不是简单复述资讯，而是沿着供需、库存、成本、利润、物流与政策建立影响链路，解释变化为什么发生。",
+    proof: "空间 × 时间 × 要素",
+  },
+  {
+    number: "02",
+    tag: "实时感知",
+    title: "从单点信息查询，走向多源信号协同",
+    description: "把行情、资讯、研报、政策、企业需求与产业资源放在同一分析上下文中，持续识别关键变量与拐点。",
+    proof: "数据 × 资讯 × 业务",
+  },
+  {
+    number: "03",
+    tag: "可信决策",
+    title: "从标准答案生成，走向经营约束下的建议",
+    description: "先给结论，再呈现依据与推理链；信息不足时主动追问库存、用量、价格区间等条件，降低建议失真。",
+    proof: "结论 × 依据 × 边界",
+  },
+  {
+    number: "04",
+    tag: "业务行动",
+    title: "从内容输出，走向策略、商机与履约闭环",
+    description: "让一次市场发现继续转化为采购节奏、销售机会、资源匹配和履约复盘，推动产业智能真正进入经营过程。",
+    proof: "判断 × 商机 × 行动",
+  },
+];
+
 const methods = [
   ["空间逻辑", "看清资源流向", "理解资源地、制造集群与消费市场的错配，把物流、运力和区域价差纳入判断。", "资源 → 物流 → 需求"],
   ["时间逻辑", "看懂周期变化", "同时观察短周期异动、中周期库存利润与长周期产能政策，避免只看一个时间截面。", "日周 → 月季 → 周期"],
@@ -94,6 +125,7 @@ export default function Home() {
           <span className="brand-copy"><strong>万联易达</strong><small>大宗智能体</small></span>
         </a>
         <nav aria-label="页面导航">
+          <a href="#breakthrough">智能突破</a>
           <a href="#value">价值</a>
           <a href="#product">产品</a>
           <a href="#method">专业能力</a>
@@ -110,8 +142,8 @@ export default function Home() {
           <div className="hero-badge"><i /> 大宗产业智能基础设施</div>
           <h1>让产业看得见变化，<br />算得清影响，抓得住机会。</h1>
           <p className="hero-lead">
-            大宗智能体连接数据、知识与产业资源，把复杂市场信号转化为可信判断与业务行动，
-            同时创造更广泛的社会价值、行业价值与客户价值。
+            大宗智能体不是通用问答工具，而是面向真实产业链构建的决策智能：
+            连接数据、知识与产业资源，把复杂市场信号转化为可信判断与业务行动。
           </p>
           <a className="explore-bar" href="#product" aria-label="探索大宗智能体">
             <span><b>开始探索</b><small>华东热卷累库，采购节奏要不要调整？</small></span>
@@ -122,6 +154,27 @@ export default function Home() {
             <div><strong>23</strong><span>类产业主体服务图谱</span></div>
             <div><strong>6</strong><span>类业务能力接入测试</span></div>
           </div>
+        </div>
+      </section>
+
+      <section className="breakthrough-section section-shell" id="breakthrough">
+        <div className="section-title centered">
+          <span>产业人工智能突破能力</span>
+          <h2>不只是会回答，<br />更要懂产业、会推理、能行动。</h2>
+          <p>通用模型解决语言理解，大宗智能体进一步解决产业知识、实时信号、可信决策与业务闭环，让人工智能真正进入经营现场。</p>
+        </div>
+        <div className="breakthrough-grid">
+          {breakthroughs.map((item) => (
+            <article className="breakthrough-card" key={item.number}>
+              <div className="breakthrough-top"><b>{item.number}</b><span>{item.tag}</span></div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <em>{item.proof}</em>
+            </article>
+          ))}
+        </div>
+        <div className="breakthrough-summary" aria-label="产业智能突破方向">
+          <span>搜索工具</span><i>→</i><strong>产业推理伙伴</strong><i>→</i><strong>经营行动助手</strong>
         </div>
       </section>
 
