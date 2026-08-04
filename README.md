@@ -24,3 +24,11 @@ EdgeOne Pages 连接本 GitHub 仓库的 `main` 分支后，使用以下设置�
 - Node.js：`22.13.0` 或更高版本
 
 每次推送到 `main` 后，EdgeOne 会自动重新构建并发布。
+
+## GitHub Pages
+
+仓库同时通过 GitHub Actions 发布公开站点：
+
+`https://ashuai365.github.io/wanlianyida-bulk-ai-2026/`
+
+发布脚本会自动为静态资源添加仓库子路径，避免样式和脚本在 GitHub Pages 环境中丢失。

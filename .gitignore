@@ -39,6 +39,7 @@ next-env.d.ts
 /dist/
 /.edgeone/
 /edgeone-dist/
+/github-pages-dist/
 /.tef_dist/
 /.wrangler/
 /outputs/
