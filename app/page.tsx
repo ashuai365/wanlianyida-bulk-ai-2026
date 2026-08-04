@@ -1,3 +1,26 @@
+import { AnchorLink } from "./anchor-link";
+
+const industryProblems = [
+  {
+    number: "01",
+    title: "信息有时差",
+    description: "行情、政策与产业事件依赖人工采集和逐层传递，市场已经变化，判断仍停留在日报与研报周期。",
+    result: "从按天更新，到实时感知",
+  },
+  {
+    number: "02",
+    title: "业务有断点",
+    description: "资讯、研究、供需、客户与交易分散在不同系统里，看懂行情之后，仍要重新寻找资源和推进商机。",
+    result: "从一份报告，到一条行动链",
+  },
+  {
+    number: "03",
+    title: "专业有门槛",
+    description: "高质量产业判断依赖资深经验与大量人力，专业能力集中在少数机构，难以低成本、规模化地服务更多主体。",
+    result: "从少数人经验，到可复用能力",
+  },
+];
+
 const valueCards = [
   {
     number: "01",
@@ -59,17 +82,17 @@ const capabilities = [
 const breakthroughs = [
   {
     number: "01",
-    tag: "产业知识",
-    title: "从通用语言理解，走向产业因果推理",
-    description: "不是简单复述资讯，而是沿着供需、库存、成本、利润、物流与政策建立影响链路，解释变化为什么发生。",
-    proof: "空间 × 时间 × 要素",
+    tag: "实时响应",
+    title: "从人工资讯周期，走向 7×24 小时秒级响应",
+    description: "简单行情快速作答，复杂问题沿分析链路展开，让市场变化不再等待日报、研报和人工排期。",
+    proof: "2 秒快答 · 10 秒理清",
   },
   {
     number: "02",
-    tag: "实时感知",
-    title: "从单点信息查询，走向多源信号协同",
-    description: "把行情、资讯、研报、政策、企业需求与产业资源放在同一分析上下文中，持续识别关键变量与拐点。",
-    proof: "数据 × 资讯 × 业务",
+    tag: "产业认知",
+    title: "从关键词检索，走向产业因果推理",
+    description: "不是简单复述资讯，而是把供需、库存、成本、利润、物流与政策放回产业链和周期中理解。",
+    proof: "空间 × 时间 × 要素",
   },
   {
     number: "03",
@@ -81,16 +104,10 @@ const breakthroughs = [
   {
     number: "04",
     tag: "业务行动",
-    title: "从内容输出，走向策略、商机与履约闭环",
-    description: "让一次市场发现继续转化为采购节奏、销售机会、资源匹配和履约复盘，推动产业智能真正进入经营过程。",
-    proof: "判断 × 商机 × 行动",
+    title: "从看懂行情，走向商机与交易推进",
+    description: "让一次市场发现继续转化为采购节奏、销售机会、资源匹配和商机跟踪，推动智能真正进入经营过程。",
+    proof: "资讯研判 × 商机撮合 × 交易推进",
   },
-];
-
-const methods = [
-  ["空间逻辑", "看清资源流向", "理解资源地、制造集群与消费市场的错配，把物流、运力和区域价差纳入判断。", "资源 → 物流 → 需求"],
-  ["时间逻辑", "看懂周期变化", "同时观察短周期异动、中周期库存利润与长周期产能政策，避免只看一个时间截面。", "日周 → 月季 → 周期"],
-  ["要素逻辑", "看透影响传导", "把产、销、存、运、需、利润、成本与宏观政策串成可解释的传导链路。", "产销存运需利本政"],
 ];
 
 const journey = [
@@ -100,13 +117,6 @@ const journey = [
   ["04", "匹配商机", "需求 · 资源 · 理由"],
   ["05", "推进交易", "询价 · 比选 · 跟进"],
   ["06", "履约复盘", "状态 · 预警 · 评估"],
-];
-
-const roleCards = [
-  ["供应端", "稳生产、控成本、保利润", "产能与成本模型 · 库存预警"],
-  ["贸易端", "抓价差、管库存、快周转", "基差监测 · 商机撮合"],
-  ["需求端", "保供、降本、优化采购", "采购节点 · 分批策略"],
-  ["金融与研究", "看资产、控风险、提效率", "贸易背景 · 专题研究"],
 ];
 
 const roadmap = [
@@ -120,36 +130,35 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="返回首页">
+        <AnchorLink className="brand" targetId="top" ariaLabel="返回首页">
           <span className="brand-symbol">万</span>
           <span className="brand-copy"><strong>万联易达</strong><small>大宗智能体</small></span>
-        </a>
+        </AnchorLink>
         <nav aria-label="页面导航">
-          <a href="#breakthrough">智能突破</a>
-          <a href="#value">价值</a>
-          <a href="#product">产品</a>
-          <a href="#method">专业能力</a>
-          <a href="#scenarios">产业场景</a>
-          <a href="#roadmap">路线</a>
+          <AnchorLink targetId="problem">产业问题</AnchorLink>
+          <AnchorLink targetId="breakthrough">智能突破</AnchorLink>
+          <AnchorLink targetId="product">产品闭环</AnchorLink>
+          <AnchorLink targetId="value">三重价值</AnchorLink>
+          <AnchorLink targetId="roadmap">进化路径</AnchorLink>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-inner">
           <div className="hero-copy">
-            <div className="hero-badge"><i /> 面向大宗产业的决策智能</div>
+            <div className="hero-badge"><i /> 大宗商品产业数字化新基建</div>
             <h1>
               <span className="hero-line">让产业看见变化</span>
               <span className="hero-line">算得清影响</span>
               <span className="hero-line hero-highlight">抓得住机会</span>
             </h1>
             <p className="hero-lead">
-              大宗智能体不是通用问答工具，而是面向真实产业链构建的决策智能。
-              它连接数据、知识与产业资源，把复杂市场信号转化为可信判断与业务行动。
+              以数据智能体与撮合智能体为双引擎，贯通资讯研判、商机撮合与交易推进，
+              把复杂市场信号转化为可信判断和可执行的经营动作。
             </p>
             <div className="hero-actions">
-              <a className="primary-action" href="#breakthrough">查看突破能力 <i>↗</i></a>
-              <a className="secondary-action" href="#product">了解产品体系 <i>→</i></a>
+              <AnchorLink className="primary-action" targetId="problem">看清产业问题 <i>↗</i></AnchorLink>
+              <AnchorLink className="secondary-action" targetId="product">查看产品闭环 <i>→</i></AnchorLink>
             </div>
             <div className="hero-keywords"><span>懂产业</span><span>会推理</span><span>能行动</span></div>
           </div>
@@ -174,17 +183,37 @@ export default function Home() {
             <div className="signal-chip signal-two">价格风险 <b>可控</b></div>
           </div>
 
-          <div className="hero-stats" aria-label="三重价值">
-            <div><strong>社会价值</strong><span>信息普惠 · 风险可见 · 保供稳链</span></div>
-            <div><strong>行业价值</strong><span>知识沉淀 · 标准共建 · 产业协同</span></div>
-            <div><strong>客户价值</strong><span>决策提速 · 经营降险 · 商机转化</span></div>
+          <div className="hero-stats" aria-label="三项核心指标">
+            <div><strong>2 秒 / 10 秒</strong><span>行情快答 · 复杂逻辑理清</span></div>
+            <div><strong>7 × 24</strong><span>持续感知 · 全天候响应</span></div>
+            <div><strong>双引擎</strong><span>数据研判 · 商机撮合</span></div>
           </div>
+        </div>
+      </section>
+
+      <section className="problem-section" id="problem">
+        <div className="section-shell">
+          <div className="section-title split">
+            <div><span>01 · 产业问题</span><h2>大宗产业缺的不是更多信息，而是更短的决策链路。</h2></div>
+            <p>信息不对称、业务链路割裂、专业服务成本高企，构成了产业效率长期难以突破的三个关键瓶颈。</p>
+          </div>
+          <div className="problem-grid">
+            {industryProblems.map((item) => (
+              <article className="problem-card" key={item.number}>
+                <b>{item.number}</b>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <strong>{item.result}</strong>
+              </article>
+            ))}
+          </div>
+          <div className="problem-conclusion"><span>核心命题</span><strong>用 AI 同时重构信息效率与交易效率。</strong></div>
         </div>
       </section>
 
       <section className="breakthrough-section section-shell" id="breakthrough">
         <div className="section-title centered">
-          <span>产业人工智能突破能力</span>
+          <span>02 · 产业人工智能突破</span>
           <h2>不只是会回答，更要懂产业、会推理、能行动。</h2>
           <p>通用模型解决语言理解，大宗智能体进一步解决产业知识、实时信号、可信决策与业务闭环，让人工智能真正进入经营现场。</p>
         </div>
@@ -203,30 +232,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="value-section section-shell" id="value">
-        <div className="section-title centered">
-          <span>三重价值</span>
-          <h2>智能的意义，不止于效率。</h2>
-          <p>从单个企业的经营改善，走向整个产业的协同升级，再服务更稳定、更透明、更高效的实体经济。</p>
-        </div>
-        <div className="value-grid">
-          {valueCards.map((card) => (
-            <article className={`value-card ${card.tone}`} key={card.title}>
-              <div className="card-top"><span>{card.eyebrow}</span><b>{card.number}</b></div>
-              <p className="value-label">{card.title}</p>
-              <h3>{card.headline}</h3>
-              <p className="value-description">{card.description}</p>
-              <ul>{card.points.map((point) => <li key={point}>{point}</li>)}</ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="product-section" id="product">
         <div className="section-shell">
           <div className="section-title split">
-            <div><span>产品体系</span><h2>从市场信号到产业行动，一个入口完成。</h2></div>
-            <p>当前版本优先跑通“交互—沉淀—再输出”的最小闭环；高级交易执行能力将根据验证结果逐步开放。</p>
+            <div><span>03 · 双引擎产品闭环</span><h2>从看懂行情，到发现商机，再到推进交易。</h2></div>
+            <p>数据智能体负责理解市场、形成判断；撮合智能体负责理解需求、连接资源。统一底座让每一次交互继续向业务结果推进。</p>
           </div>
           <div className="capability-grid">
             {capabilities.map((capability) => (
@@ -237,6 +247,13 @@ export default function Home() {
                 <p>{capability.description}</p>
                 <div className="capability-list">{capability.items.map((item) => <span key={item}>{item}</span>)}</div>
               </article>
+            ))}
+          </div>
+
+          <div className="journey-heading"><span>一条连续的业务链路</span><strong>信息不止被看见，更要被转化。</strong></div>
+          <div className="journey-track product-journey">
+            {journey.map(([number, title, description]) => (
+              <article key={number}><b>{number}</b><h3>{title}</h3><p>{description}</p></article>
             ))}
           </div>
 
@@ -257,57 +274,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="method-section section-shell" id="method">
+      <section className="value-section section-shell" id="value">
         <div className="section-title centered">
-          <span>产业推理方法</span>
-          <h2>大宗分析不是单点答案，而是一套产业推理方法。</h2>
-          <p>用“空间 + 时间 + 要素”组织行业知识，把每一条数据放回产业链、周期和区域流动中理解。</p>
+          <span>04 · 三重价值</span>
+          <h2>客户经营改善，行业协同升级，最终服务实体经济。</h2>
+          <p>价值沿着一条清晰路径展开：先帮助客户更快决策，再推动行业知识与资源协同，进一步服务保供稳链与信息普惠。</p>
         </div>
-        <div className="method-grid">
-          {methods.map(([title, lead, description, visual], index) => (
-            <article className="method-card" key={title}>
-              <div className="method-number">0{index + 1}</div>
-              <span>{title}</span>
-              <h3>{lead}</h3>
-              <p>{description}</p>
-              <div className={`method-visual visual-${index + 1}`}>{visual}</div>
+        <div className="value-grid">
+          {valueCards.map((card) => (
+            <article className={`value-card ${card.tone}`} key={card.title}>
+              <div className="card-top"><span>{card.eyebrow}</span><b>{card.number}</b></div>
+              <p className="value-label">{card.title}</p>
+              <h3>{card.headline}</h3>
+              <p className="value-description">{card.description}</p>
+              <ul>{card.points.map((point) => <li key={point}>{point}</li>)}</ul>
             </article>
           ))}
-        </div>
-        <div className="analyst-model">
-          <div><span>专业能力进阶</span><h3>让专业能力持续沉淀，从数据执行走向生态设计。</h3></div>
-          <ol>
-            <li className="active"><b>一阶</b><span>数据执行者</span><small>数据查询与标准输出</small></li>
-            <li className="active"><b>二阶</b><span>逻辑构建者</span><small>供需与产业关系推理</small></li>
-            <li><b>三阶</b><span>策略掌舵者</span><small>平衡表与策略建议</small></li>
-            <li><b>四阶</b><span>框架定调者</span><small>宏观产业微观融合</small></li>
-            <li><b>五阶</b><span>生态设计者</span><small>企业综合解决方案</small></li>
-          </ol>
-        </div>
-      </section>
-
-      <section className="journey-section" id="scenarios">
-        <div className="section-shell">
-          <div className="section-title split light">
-            <div><span>经营任务全旅程</span><h2>围绕真实经营任务，贯穿业务全过程。</h2></div>
-            <p>不是孤立堆叠智能功能，而是让每一次市场发现都能沿着分析、策略、商机、交易与履约继续向前。</p>
-          </div>
-          <div className="journey-track">
-            {journey.map(([number, title, description]) => (
-              <article key={number}><b>{number}</b><h3>{title}</h3><p>{description}</p></article>
-            ))}
-          </div>
-          <div className="role-grid">
-            {roleCards.map(([role, goal, output]) => (
-              <article key={role}><span>{role}</span><h3>{goal}</h3><p>{output}</p></article>
-            ))}
-          </div>
         </div>
       </section>
 
       <section className="coverage-section section-shell">
         <div className="coverage-hero">
-          <div className="coverage-copy"><span>产业覆盖蓝图</span><h2>一套底座，服务更广泛的产业主体。</h2><p>产品按照通用能力先行、重点品类验证、数据与产业资源逐步贯通的路径建设。</p></div>
+          <div className="coverage-copy"><span>05 · 规模与进化</span><h2>一套底座，服务更广泛的产业主体。</h2><p>以六大产业板块和 104 个品类规划为覆盖蓝图，逐步贯通数据、知识与产业资源。</p></div>
           <div className="coverage-numbers"><div><strong>104</strong><span>品类规划</span></div><div><strong>6</strong><span>产业板块</span></div><div><strong>23</strong><span>类产业主体</span></div></div>
         </div>
         <p className="coverage-note">“品类规划”不等同于所有品类均已完成全量数据与交易资源接入；具体能力以实际测试与发布版本为准。</p>
@@ -315,8 +303,8 @@ export default function Home() {
 
       <section className="roadmap-section section-shell" id="roadmap">
         <div className="section-title split">
-          <div><span>产品演进路线</span><h2>从可用，到好用，再到价值闭环。</h2></div>
-          <p>每一个版本只验证一个最关键的问题。以下节点依据 2026 年 7 月项目资料整理，后续以实际发布安排为准。</p>
+          <div><span>能力进化路线</span><h2>从问答工具，到分析伙伴，再到产业智库。</h2></div>
+          <p>每一阶段解决一个关键问题：先验证可信问答，再提升分析效率，随后贯通商机与交易，最终沉淀企业综合解决方案能力。</p>
         </div>
         <div className="roadmap-grid">
           {roadmap.map(([date, stage, value, title, description], index) => (
