@@ -132,14 +132,17 @@ export default function Home() {
           <a href="#scenarios">产业场景</a>
           <a href="#roadmap">路线</a>
         </nav>
-        <a className="header-action" href="#contact">合作咨询</a>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-inner">
           <div className="hero-copy">
             <div className="hero-badge"><i /> 面向大宗产业的决策智能</div>
-            <h1>让产业看得见变化，<br />算得清影响，<br /><span>抓得住机会。</span></h1>
+            <h1>
+              <span className="hero-line">让产业看见变化</span>
+              <span className="hero-line">算得清影响</span>
+              <span className="hero-line hero-highlight">抓得住机会</span>
+            </h1>
             <p className="hero-lead">
               大宗智能体不是通用问答工具，而是面向真实产业链构建的决策智能。
               它连接数据、知识与产业资源，把复杂市场信号转化为可信判断与业务行动。
@@ -155,7 +158,7 @@ export default function Home() {
             <div className="showcase-status"><span><i /> 产业信号已更新</span><b>今日判断</b></div>
             <div className="showcase-main">
               <span>华东热卷 · 采购策略</span>
-              <h2>库存持续上升，<br />采购节奏宜转向分批执行。</h2>
+              <h2>库存持续上升，采购节奏宜转向分批执行。</h2>
               <p>库存变化 → 区域价差 → 需求节奏 → 采购约束</p>
             </div>
             <div className="showcase-answer">
@@ -182,7 +185,7 @@ export default function Home() {
       <section className="breakthrough-section section-shell" id="breakthrough">
         <div className="section-title centered">
           <span>产业人工智能突破能力</span>
-          <h2>不只是会回答，<br />更要懂产业、会推理、能行动。</h2>
+          <h2>不只是会回答，更要懂产业、会推理、能行动。</h2>
           <p>通用模型解决语言理解，大宗智能体进一步解决产业知识、实时信号、可信决策与业务闭环，让人工智能真正进入经营现场。</p>
         </div>
         <div className="breakthrough-grid">
@@ -222,7 +225,7 @@ export default function Home() {
       <section className="product-section" id="product">
         <div className="section-shell">
           <div className="section-title split">
-            <div><span>产品体系</span><h2>从市场信号到产业行动，<br />一个入口完成。</h2></div>
+            <div><span>产品体系</span><h2>从市场信号到产业行动，一个入口完成。</h2></div>
             <p>当前版本优先跑通“交互—沉淀—再输出”的最小闭环；高级交易执行能力将根据验证结果逐步开放。</p>
           </div>
           <div className="capability-grid">
@@ -240,7 +243,7 @@ export default function Home() {
           <div className="agent-panel">
             <div className="agent-panel-copy">
               <span>可信回答，不止一个结论</span>
-              <h3>先理解产业逻辑，<br />再给经营建议。</h3>
+              <h3>先理解产业逻辑，再给经营建议。</h3>
               <p>智能体会沿着库存、区域价差、供需节奏和企业约束建立分析链路；信息不足时主动反问，避免给出脱离业务条件的答案。</p>
               <div className="panel-chips"><i>快</i><i>准</i><i>可解释</i><i>会反问</i></div>
             </div>
@@ -257,7 +260,7 @@ export default function Home() {
       <section className="method-section section-shell" id="method">
         <div className="section-title centered">
           <span>产业推理方法</span>
-          <h2>大宗分析不是单点答案，<br />而是一套产业推理方法。</h2>
+          <h2>大宗分析不是单点答案，而是一套产业推理方法。</h2>
           <p>用“空间 + 时间 + 要素”组织行业知识，把每一条数据放回产业链、周期和区域流动中理解。</p>
         </div>
         <div className="method-grid">
@@ -272,7 +275,7 @@ export default function Home() {
           ))}
         </div>
         <div className="analyst-model">
-          <div><span>专业能力进阶</span><h3>让专业能力持续沉淀，<br />从数据执行走向生态设计。</h3></div>
+          <div><span>专业能力进阶</span><h3>让专业能力持续沉淀，从数据执行走向生态设计。</h3></div>
           <ol>
             <li className="active"><b>一阶</b><span>数据执行者</span><small>数据查询与标准输出</small></li>
             <li className="active"><b>二阶</b><span>逻辑构建者</span><small>供需与产业关系推理</small></li>
@@ -286,7 +289,7 @@ export default function Home() {
       <section className="journey-section" id="scenarios">
         <div className="section-shell">
           <div className="section-title split light">
-            <div><span>经营任务全旅程</span><h2>围绕真实经营任务，<br />贯穿业务全过程。</h2></div>
+            <div><span>经营任务全旅程</span><h2>围绕真实经营任务，贯穿业务全过程。</h2></div>
             <p>不是孤立堆叠智能功能，而是让每一次市场发现都能沿着分析、策略、商机、交易与履约继续向前。</p>
           </div>
           <div className="journey-track">
@@ -304,7 +307,7 @@ export default function Home() {
 
       <section className="coverage-section section-shell">
         <div className="coverage-hero">
-          <div className="coverage-copy"><span>产业覆盖蓝图</span><h2>一套底座，<br />服务更广泛的产业主体。</h2><p>产品按照通用能力先行、重点品类验证、数据与产业资源逐步贯通的路径建设。</p></div>
+          <div className="coverage-copy"><span>产业覆盖蓝图</span><h2>一套底座，服务更广泛的产业主体。</h2><p>产品按照通用能力先行、重点品类验证、数据与产业资源逐步贯通的路径建设。</p></div>
           <div className="coverage-numbers"><div><strong>104</strong><span>品类规划</span></div><div><strong>6</strong><span>产业板块</span></div><div><strong>23</strong><span>类产业主体</span></div></div>
         </div>
         <p className="coverage-note">“品类规划”不等同于所有品类均已完成全量数据与交易资源接入；具体能力以实际测试与发布版本为准。</p>
@@ -312,7 +315,7 @@ export default function Home() {
 
       <section className="roadmap-section section-shell" id="roadmap">
         <div className="section-title split">
-          <div><span>产品演进路线</span><h2>从可用，到好用，<br />再到价值闭环。</h2></div>
+          <div><span>产品演进路线</span><h2>从可用，到好用，再到价值闭环。</h2></div>
           <p>每一个版本只验证一个最关键的问题。以下节点依据 2026 年 7 月项目资料整理，后续以实际发布安排为准。</p>
         </div>
         <div className="roadmap-grid">
@@ -324,16 +327,6 @@ export default function Home() {
               <p>{description}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="contact-section" id="contact">
-        <div className="contact-glow" />
-        <div className="section-shell contact-inner">
-          <span>让产业连接更高效</span>
-          <h2>让专业能力成为产业共同的智能生产力。</h2>
-          <p>欢迎围绕产品内测、数据能力、产业场景与商机撮合展开合作。</p>
-          <div className="contact-actions"><a href="#top">返回顶部 <i>↑</i></a><div><span>产品内测</span><span>产业共创</span><span>能力接入</span></div></div>
         </div>
       </section>
 
