@@ -136,23 +136,45 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="aurora aurora-blue" />
-        <div className="aurora aurora-violet" />
         <div className="hero-inner">
-          <div className="hero-badge"><i /> 大宗产业智能基础设施</div>
-          <h1>让产业看得见变化，<br />算得清影响，抓得住机会。</h1>
-          <p className="hero-lead">
-            大宗智能体不是通用问答工具，而是面向真实产业链构建的决策智能：
-            连接数据、知识与产业资源，把复杂市场信号转化为可信判断与业务行动。
-          </p>
-          <a className="explore-bar" href="#product" aria-label="探索大宗智能体">
-            <span><b>开始探索</b><small>华东热卷累库，采购节奏要不要调整？</small></span>
-            <i>↗</i>
-          </a>
-          <div className="hero-stats" aria-label="产品规划数据">
-            <div><strong>104</strong><span>个大宗商品品类规划</span></div>
-            <div><strong>23</strong><span>类产业主体服务图谱</span></div>
-            <div><strong>6</strong><span>类业务能力接入测试</span></div>
+          <div className="hero-copy">
+            <div className="hero-badge"><i /> 面向大宗产业的决策智能</div>
+            <h1>让产业看得见变化，<br />算得清影响，<br /><span>抓得住机会。</span></h1>
+            <p className="hero-lead">
+              大宗智能体不是通用问答工具，而是面向真实产业链构建的决策智能。
+              它连接数据、知识与产业资源，把复杂市场信号转化为可信判断与业务行动。
+            </p>
+            <div className="hero-actions">
+              <a className="primary-action" href="#breakthrough">查看突破能力 <i>↗</i></a>
+              <a className="secondary-action" href="#product">了解产品体系 <i>→</i></a>
+            </div>
+            <div className="hero-keywords"><span>懂产业</span><span>会推理</span><span>能行动</span></div>
+          </div>
+
+          <div className="hero-showcase" aria-label="大宗智能体产业判断示意">
+            <div className="showcase-status"><span><i /> 产业信号已更新</span><b>今日判断</b></div>
+            <div className="showcase-main">
+              <span>华东热卷 · 采购策略</span>
+              <h2>库存持续上升，<br />采购节奏宜转向分批执行。</h2>
+              <p>库存变化 → 区域价差 → 需求节奏 → 采购约束</p>
+            </div>
+            <div className="showcase-answer">
+              <span>智能体建议</span>
+              <strong>先缩短采购周期，再观察库存拐点。</strong>
+            </div>
+            <div className="showcase-metrics">
+              <div><strong>104</strong><span>品类规划</span></div>
+              <div><strong>23</strong><span>产业主体</span></div>
+              <div><strong>6</strong><span>业务能力</span></div>
+            </div>
+            <div className="signal-chip signal-one">供需变化 <b>↑</b></div>
+            <div className="signal-chip signal-two">价格风险 <b>可控</b></div>
+          </div>
+
+          <div className="hero-stats" aria-label="三重价值">
+            <div><strong>社会价值</strong><span>信息普惠 · 风险可见 · 保供稳链</span></div>
+            <div><strong>行业价值</strong><span>知识沉淀 · 标准共建 · 产业协同</span></div>
+            <div><strong>客户价值</strong><span>决策提速 · 经营降险 · 商机转化</span></div>
           </div>
         </div>
       </section>
