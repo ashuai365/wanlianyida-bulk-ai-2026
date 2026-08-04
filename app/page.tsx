@@ -1,7 +1,7 @@
 const valueCards = [
   {
     number: "01",
-    eyebrow: "SOCIAL VALUE",
+    eyebrow: "社会向善",
     title: "社会价值",
     headline: "让产业信息成为更普惠的决策基础",
     description:
@@ -11,7 +11,7 @@ const valueCards = [
   },
   {
     number: "02",
-    eyebrow: "INDUSTRY VALUE",
+    eyebrow: "行业共建",
     title: "行业价值",
     headline: "把分散链路连成可计算的产业网络",
     description:
@@ -21,7 +21,7 @@ const valueCards = [
   },
   {
     number: "03",
-    eyebrow: "CUSTOMER VALUE",
+    eyebrow: "客户增益",
     title: "客户价值",
     headline: "让每一次判断更快、更准、更接近行动",
     description:
@@ -33,30 +33,33 @@ const valueCards = [
 
 const capabilities = [
   {
+    icon: "数",
     tag: "核心能力",
     title: "数据智能体",
     description: "把行情、政策、资讯与研报放进同一个入口，先给结论，再展开依据。",
-    items: ["AI 行情问答", "资讯与政策解读", "研报与深度分析", "价格趋势判断"],
+    items: ["智能行情问答", "资讯与政策解读", "研报与深度分析", "价格趋势判断"],
     featured: true,
   },
   {
+    icon: "撮",
     tag: "业务贯通",
     title: "撮合智能体",
     description: "把自然语言中的采购与销售需求结构化，形成匹配建议与可跟踪商机。",
     items: ["需求结构化", "供需资源匹配", "匹配理由解释", "商机沉淀与跟踪"],
   },
   {
+    icon: "智",
     tag: "统一底座",
     title: "智能交互底座",
     description: "用多轮对话承载业务，在互动中沉淀画像、观点、需求与内容资产。",
-    items: ["统一 AI 入口", "上下文记忆", "主动反问补全", "内容再输出与分享"],
+    items: ["统一智能入口", "上下文记忆", "主动反问补全", "内容再输出与分享"],
   },
 ];
 
 const methods = [
-  ["SPACE", "空间逻辑", "理解资源地、制造集群与消费市场的错配，把物流、运力和区域价差纳入判断。", "资源 → 物流 → 需求"],
-  ["TIME", "时间逻辑", "同时观察短周期异动、中周期库存利润与长周期产能政策，避免只看一个时间截面。", "日周 → 月季 → 周期"],
-  ["FACTORS", "要素逻辑", "把产、销、存、运、需、利润、成本与宏观政策串成可解释的传导链路。", "产销存运需利本政"],
+  ["空间逻辑", "看清资源流向", "理解资源地、制造集群与消费市场的错配，把物流、运力和区域价差纳入判断。", "资源 → 物流 → 需求"],
+  ["时间逻辑", "看懂周期变化", "同时观察短周期异动、中周期库存利润与长周期产能政策，避免只看一个时间截面。", "日周 → 月季 → 周期"],
+  ["要素逻辑", "看透影响传导", "把产、销、存、运、需、利润、成本与宏观政策串成可解释的传导链路。", "产销存运需利本政"],
 ];
 
 const journey = [
@@ -79,7 +82,7 @@ const roadmap = [
   ["07.31", "内测版本", "能用", "智能问答工具", "验证统一入口与核心交互"],
   ["08.31", "公测计划", "好用", "分析师工作台", "扩展资讯中心与商机中心"],
   ["09.15", "商业化计划", "价值闭环", "个性化行业产品", "验证内容与撮合权益"],
-  ["FUTURE", "长期方向", "专业进化", "企业综合方案行业专家", "融合数据、专家经验与产业资源"],
+  ["持续", "长期方向", "专业进化", "企业综合方案行业专家", "融合数据、专家经验与产业资源"],
 ];
 
 export default function Home() {
@@ -87,7 +90,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回首页">
-          <span className="brand-symbol">W</span>
+          <span className="brand-symbol">万</span>
           <span className="brand-copy"><strong>万联易达</strong><small>大宗智能体</small></span>
         </a>
         <nav aria-label="页面导航">
@@ -124,7 +127,7 @@ export default function Home() {
 
       <section className="value-section section-shell" id="value">
         <div className="section-title centered">
-          <span>VALUE FOR A BETTER INDUSTRY</span>
+          <span>三重价值</span>
           <h2>智能的意义，不止于效率。</h2>
           <p>从单个企业的经营改善，走向整个产业的协同升级，再服务更稳定、更透明、更高效的实体经济。</p>
         </div>
@@ -144,13 +147,13 @@ export default function Home() {
       <section className="product-section" id="product">
         <div className="section-shell">
           <div className="section-title split">
-            <div><span>PRODUCT SYSTEM</span><h2>从市场信号到产业行动，<br />一个入口完成。</h2></div>
+            <div><span>产品体系</span><h2>从市场信号到产业行动，<br />一个入口完成。</h2></div>
             <p>当前版本优先跑通“交互—沉淀—再输出”的最小闭环；高级交易执行能力将根据验证结果逐步开放。</p>
           </div>
           <div className="capability-grid">
             {capabilities.map((capability) => (
               <article className={`capability-card ${capability.featured ? "featured" : ""}`} key={capability.title}>
-                <div className="capability-icon">✦</div>
+                <div className="capability-icon">{capability.icon}</div>
                 <span className="capability-tag">{capability.tag}</span>
                 <h3>{capability.title}</h3>
                 <p>{capability.description}</p>
@@ -167,7 +170,7 @@ export default function Home() {
               <div className="panel-chips"><i>快</i><i>准</i><i>可解释</i><i>会反问</i></div>
             </div>
             <div className="conversation-card" aria-label="大宗智能体交互示意">
-              <div className="conversation-head"><span><i>AI</i><b>大宗智能体</b></span><em>在线</em></div>
+              <div className="conversation-head"><span><i>智</i><b>大宗智能体</b></span><em>在线</em></div>
               <div className="question">华东热卷近期库存上升，采购节奏要不要调整？</div>
               <div className="reasoning"><span>分析链路</span><p>库存变化 → 区域价差 → 供需节奏 → 采购约束</p></div>
               <div className="answer"><small>结论先行</small><strong>建议先缩短采购周期，再根据库存拐点分批执行。</strong><p>请补充月均用量、当前库存天数与可接受价格区间，以生成更贴近经营的方案。</p></div>
@@ -178,29 +181,29 @@ export default function Home() {
 
       <section className="method-section section-shell" id="method">
         <div className="section-title centered">
-          <span>PROFESSIONAL INTELLIGENCE</span>
+          <span>产业推理方法</span>
           <h2>大宗分析不是单点答案，<br />而是一套产业推理方法。</h2>
           <p>用“空间 + 时间 + 要素”组织行业知识，把每一条数据放回产业链、周期和区域流动中理解。</p>
         </div>
         <div className="method-grid">
-          {methods.map(([english, title, description, visual], index) => (
-            <article className="method-card" key={english}>
+          {methods.map(([title, lead, description, visual], index) => (
+            <article className="method-card" key={title}>
               <div className="method-number">0{index + 1}</div>
-              <span>{english}</span>
-              <h3>{title}</h3>
+              <span>{title}</span>
+              <h3>{lead}</h3>
               <p>{description}</p>
               <div className={`method-visual visual-${index + 1}`}>{visual}</div>
             </article>
           ))}
         </div>
         <div className="analyst-model">
-          <div><span>ANALYST LEVEL MODEL</span><h3>让专业能力持续沉淀，<br />从数据执行走向生态设计。</h3></div>
+          <div><span>专业能力进阶</span><h3>让专业能力持续沉淀，<br />从数据执行走向生态设计。</h3></div>
           <ol>
-            <li className="active"><b>L1</b><span>数据执行者</span><small>数据查询与标准输出</small></li>
-            <li className="active"><b>L2</b><span>逻辑构建者</span><small>供需与产业关系推理</small></li>
-            <li><b>L3</b><span>策略掌舵者</span><small>平衡表与策略建议</small></li>
-            <li><b>L4</b><span>框架定调者</span><small>宏观产业微观融合</small></li>
-            <li><b>L5</b><span>生态设计者</span><small>企业综合解决方案</small></li>
+            <li className="active"><b>一阶</b><span>数据执行者</span><small>数据查询与标准输出</small></li>
+            <li className="active"><b>二阶</b><span>逻辑构建者</span><small>供需与产业关系推理</small></li>
+            <li><b>三阶</b><span>策略掌舵者</span><small>平衡表与策略建议</small></li>
+            <li><b>四阶</b><span>框架定调者</span><small>宏观产业微观融合</small></li>
+            <li><b>五阶</b><span>生态设计者</span><small>企业综合解决方案</small></li>
           </ol>
         </div>
       </section>
@@ -208,8 +211,8 @@ export default function Home() {
       <section className="journey-section" id="scenarios">
         <div className="section-shell">
           <div className="section-title split light">
-            <div><span>ONE BUSINESS JOURNEY</span><h2>围绕真实经营任务，<br />贯穿业务全过程。</h2></div>
-            <p>不是孤立堆叠 AI 功能，而是让每一次市场发现都能沿着分析、策略、商机、交易与履约继续向前。</p>
+            <div><span>经营任务全旅程</span><h2>围绕真实经营任务，<br />贯穿业务全过程。</h2></div>
+            <p>不是孤立堆叠智能功能，而是让每一次市场发现都能沿着分析、策略、商机、交易与履约继续向前。</p>
           </div>
           <div className="journey-track">
             {journey.map(([number, title, description]) => (
@@ -226,7 +229,7 @@ export default function Home() {
 
       <section className="coverage-section section-shell">
         <div className="coverage-hero">
-          <div className="coverage-copy"><span>INDUSTRY COVERAGE BLUEPRINT</span><h2>一套底座，<br />服务更广泛的产业主体。</h2><p>产品按照通用能力先行、重点品类验证、数据与产业资源逐步贯通的路径建设。</p></div>
+          <div className="coverage-copy"><span>产业覆盖蓝图</span><h2>一套底座，<br />服务更广泛的产业主体。</h2><p>产品按照通用能力先行、重点品类验证、数据与产业资源逐步贯通的路径建设。</p></div>
           <div className="coverage-numbers"><div><strong>104</strong><span>品类规划</span></div><div><strong>6</strong><span>产业板块</span></div><div><strong>23</strong><span>类产业主体</span></div></div>
         </div>
         <p className="coverage-note">“品类规划”不等同于所有品类均已完成全量数据与交易资源接入；具体能力以实际测试与发布版本为准。</p>
@@ -234,7 +237,7 @@ export default function Home() {
 
       <section className="roadmap-section section-shell" id="roadmap">
         <div className="section-title split">
-          <div><span>PRODUCT ROADMAP</span><h2>从可用，到好用，<br />再到价值闭环。</h2></div>
+          <div><span>产品演进路线</span><h2>从可用，到好用，<br />再到价值闭环。</h2></div>
           <p>每一个版本只验证一个最关键的问题。以下节点依据 2026 年 7 月项目资料整理，后续以实际发布安排为准。</p>
         </div>
         <div className="roadmap-grid">
@@ -252,7 +255,7 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="contact-glow" />
         <div className="section-shell contact-inner">
-          <span>WANLIANYIDA · BULK INTELLIGENCE</span>
+          <span>让产业连接更高效</span>
           <h2>让专业能力成为产业共同的智能生产力。</h2>
           <p>欢迎围绕产品内测、数据能力、产业场景与商机撮合展开合作。</p>
           <div className="contact-actions"><a href="#top">返回顶部 <i>↑</i></a><div><span>产品内测</span><span>产业共创</span><span>能力接入</span></div></div>
@@ -260,7 +263,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="section-shell footer-inner"><div><strong>万联易达 · 大宗智能事业群</strong><span>大宗行业的 AI 入口</span></div><p>内容依据项目历次汇报及 7.31 MVP 需求资料整理 · 数据与路线截至 2026 年 7 月</p></div>
+        <div className="section-shell footer-inner"><div><strong>万联易达 · 大宗智能事业群</strong><span>大宗行业的智能入口</span></div><p>内容依据项目历次汇报及 7.31 产品需求资料整理 · 数据与路线截至 2026 年 7 月</p></div>
       </footer>
     </main>
   );
