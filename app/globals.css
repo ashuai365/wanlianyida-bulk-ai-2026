@@ -14,10 +14,16 @@
   --deep-blue: #2864bf;
   --cyan: #75cbd7;
   --violet: #998ce8;
+  --header-height: 72px;
+  --anchor-gap: 16px;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: auto; background: var(--paper); }
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: calc(var(--header-height) + var(--anchor-gap));
+  background: var(--paper);
+}
 body {
   margin: 0;
   overflow-x: hidden;
@@ -35,9 +41,7 @@ p { text-wrap: pretty; }
 ::selection { background: #ffd8bb; color: var(--ink); }
 .section-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .breakthrough-section, .value-section, .product-section, .method-section, .journey-section, .coverage-section, .roadmap-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 900px;
-  scroll-margin-top: 76px;
+  scroll-margin-top: calc(var(--header-height) + var(--anchor-gap));
 }
 
 .site-header {
@@ -409,6 +413,7 @@ footer { border-top: 1px solid #e3eaf3; background: #fff; color: var(--ink); }
 }
 
 @media (max-width: 720px) {
+  :root { --header-height: 62px; --anchor-gap: 12px; }
   .section-shell { width: min(calc(100% - 28px), 1180px); }
   .site-header { height: 62px; padding: 0 14px; }
   .brand-copy small { display: none; }
