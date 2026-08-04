@@ -259,7 +259,7 @@ export default function Home() {
             <div>
               <h2>一块矿石、一吨钢材、一船粮食，连接的是整个实体经济。</h2>
             </div>
-            <p>大宗商品从资源地出发，穿过生产、流通、消费、金融与治理体系。价格的一次波动，会沿产业链传导为成本、库存、利润与风险。真正重要的，从来不只是“发生了什么”，而是“将影响谁、如何影响、下一步怎么办”。</p>
+            <p className="chapter-subtitle">大宗商品从资源地出发，穿过生产、流通、消费、金融与治理体系。价格的一次波动，会沿产业链传导为成本、库存、利润与风险。真正重要的，从来不只是“发生了什么”，而是“将影响谁、如何影响、下一步怎么办”。</p>
           </div>
           <div className="industry-chain" aria-label="大宗商品产业链">
             {industryChain.map(([number, title, description]) => (
@@ -278,7 +278,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-title split">
             <div><span>第一幕 · 产业困局</span><h2>大宗产业缺的不是更多信息，而是更短的决策链路。</h2></div>
-            <p>信息不对称、业务链路割裂、专业服务成本高企，构成了产业效率长期难以突破的三个关键瓶颈。</p>
+            <p className="chapter-subtitle">信息不对称、业务链路割裂、专业服务成本高企，构成了产业效率长期难以突破的三个关键瓶颈。</p>
           </div>
           <div className="problem-grid">
             {industryProblems.map((item) => (
@@ -311,7 +311,7 @@ export default function Home() {
         <div className="section-title centered">
           <span>第二幕 · AI 破局</span>
           <h2>不只是会回答，更要懂产业、会推理、能行动。</h2>
-          <p>通用模型解决语言理解，大宗智能体进一步解决产业知识、实时信号、可信决策与业务闭环，让人工智能真正进入经营现场。</p>
+          <p className="chapter-subtitle">通用模型解决语言理解，大宗智能体进一步解决产业知识、实时信号、可信决策与业务闭环，让人工智能真正进入经营现场。</p>
         </div>
         <div className="breakthrough-grid">
           {breakthroughs.map((item) => (
@@ -377,7 +377,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-title split">
             <div><span>第四幕 · 进入经营现场</span><h2>同一个产业智能底座，服务不同角色的真实任务。</h2></div>
-            <p>智能体不是展示型能力。它需要理解每个角色的经营目标、约束条件和业务语言，把通用智能转化为具体的产业动作。</p>
+            <p className="chapter-subtitle">智能体不是展示型能力。它需要理解每个角色的经营目标、约束条件和业务语言，把通用智能转化为具体的产业动作。</p>
           </div>
           <div className="scenario-grid">
             {roleScenarios.map((scenario, index) => (
@@ -399,7 +399,7 @@ export default function Home() {
         <div className="section-title centered">
           <span>第五幕 · 价值扩散</span>
           <h2>客户经营改善，行业协同升级，最终服务实体经济。</h2>
-          <p>价值沿着一条清晰路径展开：先帮助客户更快决策，再推动行业知识与资源协同，进一步服务保供稳链与信息普惠。</p>
+          <p className="chapter-subtitle">价值沿着一条清晰路径展开：先帮助客户更快决策，再推动行业知识与资源协同，进一步服务保供稳链与信息普惠。</p>
         </div>
         <div className="value-grid">
           {valueCards.map((card) => (
@@ -422,7 +422,7 @@ export default function Home() {
 
       <section className="coverage-section section-shell">
         <div className="coverage-hero">
-          <div className="coverage-copy"><span>终章 · 规模与进化</span><h2>一套底座，服务更广泛的产业主体。</h2><p>以六大产业板块和 104 个品类规划为覆盖蓝图，逐步贯通数据、知识与产业资源。</p></div>
+          <div className="coverage-copy"><span>第六幕 · 规模进化</span><h2>一套底座，服务更广泛的产业主体。</h2><p>以六大产业板块和 104 个品类规划为覆盖蓝图，逐步贯通数据、知识与产业资源。</p></div>
           <div className="coverage-numbers"><div><strong>104</strong><span>品类规划</span></div><div><strong>6</strong><span>产业板块</span></div><div><strong>23</strong><span>类产业主体</span></div></div>
         </div>
         <div className="category-grid">
@@ -433,8 +433,8 @@ export default function Home() {
 
       <section className="roadmap-section section-shell" id="roadmap">
         <div className="section-title split">
-          <div><span>能力进化路线</span><h2>从问答工具，到分析伙伴，再到产业智库。</h2></div>
-          <p>每一阶段解决一个关键问题：先验证可信问答，再提升分析效率，随后贯通商机与交易，最终沉淀企业综合解决方案能力。</p>
+          <div><span>第七幕 · 能力进化</span><h2>从问答工具，到分析伙伴，再到产业智库。</h2></div>
+          <p className="chapter-subtitle">每一阶段解决一个关键问题：先验证可信问答，再提升分析效率，随后贯通商机与交易，最终沉淀企业综合解决方案能力。</p>
         </div>
         <div className="roadmap-grid">
           {roadmap.map(([date, stage, value, title, description], index) => (
@@ -458,7 +458,7 @@ export default function Home() {
 
       <section className="manifesto-section">
         <div className="section-shell manifesto-inner">
-          <span>让产业连接更高效</span>
+          <span>尾声 · 产业共益</span>
           <h2>让每一个产业主体，都拥有理解变化、判断影响、抓住机会的能力。</h2>
           <p>从市场信号到产业判断，从经营策略到资源连接，大宗智能体正在把专业能力沉淀为可持续进化的产业智能基础设施。</p>
           <div><b>看见变化</b><i>→</i><b>理解影响</b><i>→</i><b>形成策略</b><i>→</i><b>连接资源</b><i>→</i><b>推进行动</b></div>
