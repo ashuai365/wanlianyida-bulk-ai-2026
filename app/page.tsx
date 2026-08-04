@@ -332,7 +332,10 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-title split">
             <div><span>第三幕 · 双引擎登场</span><h2>从看懂行情，到发现商机，再到推进交易。</h2></div>
-            <p>数据智能体负责理解市场、形成判断；撮合智能体负责理解需求、连接资源。统一底座让每一次交互继续向业务结果推进。</p>
+            <aside className="positioning-statement" aria-label="大宗智能体核心定位">
+              <span>核心定位</span>
+              <p><strong>数据智能体</strong>负责理解市场、形成判断；<strong>撮合智能体</strong>负责理解需求、连接资源。<em>统一底座让每一次交互继续向业务结果推进。</em></p>
+            </aside>
           </div>
           <div className="capability-grid">
             {capabilities.map((capability) => (
